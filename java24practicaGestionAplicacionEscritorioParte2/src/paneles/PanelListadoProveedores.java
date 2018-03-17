@@ -52,9 +52,12 @@ public class PanelListadoProveedores extends JPanel implements ActionListener{
        
 		// Para quitar todo lo que tuviera antes el panel
 		this.removeAll();
-		this.add(botonBorrar);
+
 		// Add the scroll pane to this panel.
         this.add(scrollPane);
+        
+        // Añadimos el botón
+		this.add(botonBorrar);
         
         // Voy a atender al botón BORRAR desde la instancia de esta clase
         botonBorrar.addActionListener(this);

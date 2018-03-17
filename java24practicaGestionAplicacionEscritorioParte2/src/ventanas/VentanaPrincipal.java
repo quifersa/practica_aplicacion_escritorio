@@ -9,6 +9,7 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.SwingUtilities;
 
+import paneles.PanelAyuda;
 import paneles.PanelListadoClientes;
 import paneles.PanelListadoProveedores;
 import paneles.PanelRegistroCliente;
@@ -20,6 +21,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	private PanelListadoClientes panelListadoClientes = new PanelListadoClientes();
 	private PanelRegistroProveedor panelRegistroProveedor = new PanelRegistroProveedor();
 	private PanelListadoProveedores panelListadoProveedores = new PanelListadoProveedores();
+	private PanelAyuda panelAyuda = new PanelAyuda();
 	
 	
  // JMenuBar contiene diferentes JMenu y éstos tienen a su vez diferentes JMenuItem
@@ -37,10 +39,12 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		JMenuItem clientesListar = new JMenuItem("Listar clientes");
 		JMenuItem proveedoresInsertar = new JMenuItem("Insertar proveedor");
 		JMenuItem proveedoresListar = new JMenuItem("Listar proveedores");
+		JMenuItem soporte = new JMenuItem("Soporte técnico");
 		menuClientes.add(clientesInsertar);
 		menuClientes.add(clientesListar);
 		menuProveedores.add(proveedoresInsertar);
 		menuProveedores.add(proveedoresListar);
+		menuAyuda.add(soporte);
 		barraDeMenu.add(menuClientes);
 		barraDeMenu.add(menuProveedores);
 		barraDeMenu.add(menuAyuda);
@@ -52,6 +56,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		clientesListar.addActionListener(this);
 		proveedoresInsertar.addActionListener(this);
 		proveedoresListar.addActionListener(this);
+		soporte.addActionListener(this);
 		
 		
 		// Preparación de la ventana principal:
@@ -84,6 +89,8 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 	   } else if (e.getActionCommand().equals("Listar proveedores")) {
 		   setContentPane(panelListadoProveedores);
 		   panelListadoProveedores.refrescarProveedores();
+	   }  else if (e.getActionCommand().equals("Soporte técnico")) {
+		   setContentPane(panelAyuda);
 	   }
 	   // Esto es para refrescar cuando paso de un panel a otro
 	   SwingUtilities.updateComponentTreeUI(this);

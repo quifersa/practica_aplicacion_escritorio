@@ -1,5 +1,6 @@
 package paneles;
 
+import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -45,9 +46,12 @@ public class PanelListadoClientes extends JPanel implements ActionListener{
        
 		// Para quitar todo lo que tuviera antes el panel
 		this.removeAll();
-		this.add(botonBorrar);
+		
 		// Add the scroll pane to this panel.
         this.add(scrollPane);
+        
+        // Añadimos el botón
+        this.add(botonBorrar);
         
         // Voy a atender al botón BORRAR desde la instancia de esta clase
         botonBorrar.addActionListener(this);
@@ -73,7 +77,7 @@ public class PanelListadoClientes extends JPanel implements ActionListener{
 			refrescarClientes();
 			SwingUtilities.updateComponentTreeUI(this);
 			
-		} else if (confirmacion == 1 || confirmacion == 2 || confirmacion == 3) {
+		} else {
 			refrescarClientes();
 			SwingUtilities.updateComponentTreeUI(this);
 			return;
