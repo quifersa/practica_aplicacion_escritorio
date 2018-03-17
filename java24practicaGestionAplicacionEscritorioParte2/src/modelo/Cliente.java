@@ -7,6 +7,7 @@ public class Cliente {
 	private String poblacion;
 	private String codigoPostal;
 	private String telefono;
+	private int id;
 	
 	public Cliente() {
 	}
@@ -61,11 +62,19 @@ public class Cliente {
 		this.telefono = telefono;
 	}
 
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
 		return "Cliente [nombre=" + nombre + ", domicilio=" + domicilio
-				+ ", poblacion=" + poblacion + ", codigoPostal=" + codigoPostal
-				+ ", telefono=" + telefono + "]";
+				+ ", población=" + poblacion + ", código postal=" + codigoPostal
+				+ ", teléfono=" + telefono + "]";
 	}
 	
 	

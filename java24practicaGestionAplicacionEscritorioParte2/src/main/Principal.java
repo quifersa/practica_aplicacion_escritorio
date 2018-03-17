@@ -18,8 +18,6 @@ package main;
 
 import ventanas.VentanaPrincipal;
 
-// Nuevo comentario
-
 public class Principal {
 	
 	public static void main(String[] args) {

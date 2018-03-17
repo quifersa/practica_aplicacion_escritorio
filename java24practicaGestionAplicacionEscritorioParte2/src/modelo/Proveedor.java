@@ -12,6 +12,7 @@ public class Proveedor {
 	private String ambitoActividad;
 	private String certificadoMinisterioIndustria;
 	private String estructuraJuridica;
+	private int id;
 	
 	public Proveedor() {
 
@@ -118,18 +119,25 @@ public class Proveedor {
 	public void setEstructuraJuridica(String estructuraJuridica) {
 		this.estructuraJuridica = estructuraJuridica;
 	}
-
 	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
 	@Override
 	public String toString() {
-		return "Proveedor [nombreEmpresa=" + nombreEmpresa + ", direccion="
-				+ direccion + ", telefono=" + telefono + ", correoElectronico="
-				+ correoElectronico + ", paginaWeb=" + paginaWeb
-				+ ", nombreRepresentante=" + nombreRepresentante
-				+ ", telefonoRepresentante=" + telefonoRepresentante
-				+ ", ambitoActividad=" + ambitoActividad
-				+ ", certificadoMinisterioIndustria="
-				+ certificadoMinisterioIndustria + ", estructuraJuridica="
+		return "Proveedor [nombre empresa=" + nombreEmpresa + ", dirección="
+				+ direccion + ", teléfono=" + telefono + ", correo electrónico="
+				+ correoElectronico + ", \n página web=" + paginaWeb
+				+ ", nombre representante=" + nombreRepresentante
+				+ ", teléfono representante=" + telefonoRepresentante
+				+ ", ámbito actividad=" + ambitoActividad
+				+ ", certificado Ministerio Industria="
+				+ certificadoMinisterioIndustria + ", \n estructura jurídica="
 				+ estructuraJuridica + "]";
 	}
 

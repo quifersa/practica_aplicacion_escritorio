@@ -83,6 +83,7 @@ public class VentanaPrincipal extends JFrame implements ActionListener{
 		   setContentPane(panelRegistroProveedor);
 	   } else if (e.getActionCommand().equals("Listar proveedores")) {
 		   setContentPane(panelListadoProveedores);
+		   panelListadoProveedores.refrescarProveedores();
 	   }
 	   // Esto es para refrescar cuando paso de un panel a otro
 	   SwingUtilities.updateComponentTreeUI(this);

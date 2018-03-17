@@ -59,6 +59,16 @@ public class ClientesDAOImpl implements ClientesDAO {
 
 	@Override
 	public void borrarCliente(int id) {
+		try {
+			PreparedStatement ps = miConexion.prepareStatement(ConstantesSQL.sqlBorradoCliente);
+			ps.setInt(1, id);
+			ps.execute();
+			ps.close();
+		} catch (SQLException e) {
+			System.out.println("La sql de borrado está mal");
+			System.out.println(e.getMessage());// Para sacar un poco más de información del error
+			e.printStackTrace();
+		}
 	}
 
 	@Override
@@ -86,6 +96,7 @@ public class ClientesDAOImpl implements ClientesDAO {
 				c.setPoblacion(resultado.getString("poblacion"));
 				c.setCodigoPostal(resultado.getString("codigo_postal"));
 				c.setTelefono(resultado.getString("telefono"));
+				c.setId(resultado.getInt("id"));
 
 				listClientes.add(c);
 				

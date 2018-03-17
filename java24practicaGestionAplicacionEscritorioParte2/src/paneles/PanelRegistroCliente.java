@@ -110,6 +110,13 @@ public class PanelRegistroCliente extends JPanel implements ActionListener{
 		
 		JOptionPane.showMessageDialog(null, "Información registrada correctamente");
 		
+		// Limpiamos los campos del formulario al registrar
+		campoNombre.setText(null);
+		campoDomicilio.setText(null);
+		campoPoblacion.setText(null);
+		campoCodigoPostal.setText(null);
+		campoTelefono.setText(null);
+		
 		
 	}
 	

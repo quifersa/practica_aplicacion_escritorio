@@ -6,7 +6,7 @@ import modelo.Cliente;
 
 public class TableModelClientes extends AbstractTableModel{
 	
-	private String[] columnas = {"nombre","domicilio","poblacion","codigo postal","telefono"};
+	private String[] columnas = {"Nombre","Domicilio","Población","Código postal","Teléfono"};
 	private String[][] datos = null;
 	
 	public TableModelClientes(Cliente[] clientes) {
@@ -26,7 +26,13 @@ public class TableModelClientes extends AbstractTableModel{
 			datos[i][4] = c.getTelefono();
 			
 		}// fin for
+		
 	}// fin TableModelClientes
+	
+	@Override
+	public String getColumnName(int numCol) {
+	      return columnas[numCol];
+	}
 	
 	@Override
 	public int getColumnCount() {

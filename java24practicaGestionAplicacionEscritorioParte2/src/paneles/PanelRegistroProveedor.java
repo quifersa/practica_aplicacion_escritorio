@@ -213,6 +213,19 @@ public class PanelRegistroProveedor extends JPanel implements ActionListener{
 		
 		JOptionPane.showMessageDialog(null, "Información registrada correctamente");
 		
+		// Limpiamos los campos del formulario al registrar
+		campoNombreEmpresa.setText(null);
+		campoDireccion.setText(null);
+		campoTelefono.setText(null);
+		campoCorreoElectronico.setText(null);
+		campoPaginaWeb.setText(null);
+		campoNombreRepresentante.setText(null);
+		campoTelefonoRepresentante.setText(null);
+		botonNacional.setSelected(true);
+		botonInternacional.setSelected(false);
+		botonCertificado.setSelected(false);
+		listaEstructura.setSelectedIndex(0);
+		
 		}
 	
 }

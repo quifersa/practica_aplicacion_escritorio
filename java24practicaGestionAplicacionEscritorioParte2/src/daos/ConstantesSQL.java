@@ -14,4 +14,8 @@ public class ConstantesSQL {
 	
 	final static String sqlSeleccionProveedores = "select * from tabla_proveedores";
 	
+	final static String sqlBorradoCliente = "delete from tabla_clientes where id=?";
+	
+	final static String sqlBorradoProveedor = "delete from tabla_proveedores where id=?";
+	
 }
